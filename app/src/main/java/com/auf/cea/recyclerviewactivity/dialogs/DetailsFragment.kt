@@ -5,8 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
 import androidx.fragment.app.DialogFragment
 import com.auf.cea.recyclerviewactivity.R
+import com.auf.cea.recyclerviewactivity.databinding.FragmentDetailsBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -22,6 +24,14 @@ class DetailsFragment : DialogFragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+
+    private lateinit var binding: FragmentDetailsBinding
+    lateinit var onDialogCallback: DialogFragmentInterface
+
+    interface DialogFragmentInterface{
+        fun passData(string: String)
+    }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

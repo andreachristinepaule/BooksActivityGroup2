@@ -1,14 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".dialogs.DetailsFragment">
+<LinearLayout
 
-    <!-- TODO: Update blank fragment layout -->
+    android:id="@+id/ll_fragment_details"
+    android:gravity="center"
+    android:layout_gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginHorizontal="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
     <TextView
+        android:id="@+id/txt_name"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title:"/>
+    <TextView
+        android:id="@+id/txt_author"
+        android:textSize="12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Author:"/>
+    <TextView
+        android:id="@+id/txt_date_published"
+        android:textSize="12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Year:"/>
+    <TextView
+        android:id="@+id/txt_full_desc"
+        android:textSize="12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\nFull Description:"/>
+    <Button
+        android:id="@+id/btn_close"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:text="Close"/>
 
-</FrameLayout>
+</LinearLayout>
+
